@@ -1,0 +1,2 @@
+rosbag_demo
+-DCATKIN_DEVEL_PREFIX=/home/xiongzh/demo_ros/c5_2_rosbag/devel -DCMAKE_INSTALL_PREFIX=/home/xiongzh/demo_ros/c5_2_rosbag/install -G Unix Makefiles

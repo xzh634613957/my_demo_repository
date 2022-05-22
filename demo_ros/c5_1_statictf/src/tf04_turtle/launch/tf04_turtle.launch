@@ -1,0 +1,33 @@
+<launch>
+    <!-- 
+        流程详解:
+            1.准备工作: 启动乌龟的GUI节点与键盘控制节点
+            2.调用服务客户端生成一只新乌龟
+            3.发布两只乌龟相对于世界坐标系的坐标信息
+            4.订阅两只乌龟的坐标信息, 并且转换为乌龟A相对于乌龟B的坐标信息, 然后发布速度信息
+     -->
+
+    <!-- 1.准备工作: 启动乌龟的GUI节点与键盘控制节点     -->
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle1" output="screen" />
+    <node pkg="turtlesim" type="turtle_teleop_key" name="key_control" output="screen" />
+
+    <!-- 2.调用服务客户端生成一只新乌龟 -->
+    <node pkg="tf04_turtle" type="tf04_new_turtle.py" name="turtle2" output="screen" />
+
+    <!-- 3.发布两只乌龟相对于世界坐标系的坐标信息
+            3.1 使用两个节点, 并以动态坐标变换的方式发布两只乌龟相对于世界坐标系的位置信息
+            3.2 在调用节点时, 由于两只乌龟都是基于世界坐标系发布动态坐标信息, 因此两个发布节点的代码基本类似
+                此时可以使用 node 标签下的 args 属性, 即动态传参功能, 这样就可以只使用一个节点文件发布两个
+                节点信息
+            3.3 两个节点的代码中有两个不同的地方:
+                a. 订阅的话题名称
+                b. 子坐标系的名称    
+     -->
+     <node pkg="tf04_turtle" type="tf04_pub_turtle.py" name="pub1" args="turtle1" output="screen" />
+     <node pkg="tf04_turtle" type="tf04_pub_turtle.py" name="pub2" args="turtle2" output="screen" />
+
+     <!-- 4.订阅两只乌龟的坐标信息, 并且转换为乌龟1(子坐标系)相对于乌龟2(父坐标系)的坐标信息, 然后发布速度信息 -->
+     <node pkg="tf04_turtle" type="tf04_control_turtle.py" name="control" output="screen" />
+
+
+</launch>

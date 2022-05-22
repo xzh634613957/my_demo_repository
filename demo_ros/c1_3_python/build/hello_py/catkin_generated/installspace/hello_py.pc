@@ -1,0 +1,8 @@
+prefix=/home/xiongzh/demo_ros/demo2_2/install
+
+Name: hello_py
+Description: Description of hello_py
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

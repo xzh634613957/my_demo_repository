@@ -1,0 +1,118 @@
+<robot name="my_car">
+
+    <!-- 1. Adding the base_footprint -->
+    <link name="base_footprint">
+        <visual>
+            <geometry> 
+                <sphere radius="0.001" />
+            </geometry>
+        </visual>
+    </link>
+
+
+    <!-- 2. Adding the base_line and its joint -->
+    <link name="base_link">
+        <visual>
+            <geometry> 
+                <cylinder radius="0.1" length="0.08"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="car_color">
+                <color rgba="0.8 0.3 0.1 0.5"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- the joint of the base_link and the base_footprint -->
+    <joint name="base_link2base_footprint" type="fixed">
+        <parent link="base_footprint"/>        
+        <child link="base_link"/>           
+        <origin xyz="0.0 0.0 0.055" />       
+    </joint>
+
+
+    <!-- 3. Adding the driving wheels and their joint -->
+    <link name="left_wheel">
+        <visual>
+            <geometry> 
+                <cylinder radius="0.0325" length="0.015"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="1.5708 0.0 0.0"/>
+            <material name="wheel_color">
+                <color rgba="0 0 0 0.5"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="right_wheel">
+        <visual>
+            <geometry> 
+                <cylinder radius="0.0325" length="0.015"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="1.5708 0.0 0.0"/>
+            <material name="wheel_color">
+                <color rgba="0 0 0 0.5"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- the joint of the base_link and the left_wheel -->
+    <joint name="left2link" type="continuous">
+        <parent link="base_link"/>        
+        <child link="left_wheel"/>           
+        <origin xyz="0.0 0.1 -0.0225" rpy="0.0 0.0 0.0" />
+        <axis xyz="0.0 1.0 0.0"/>       
+    </joint>
+
+    <!-- the joint of the base_link and the right_wheel -->
+    <joint name="right2link" type="continuous">
+        <parent link="base_link"/>        
+        <child link="right_wheel"/>           
+        <origin xyz="0.0 -0.1 -0.0225" rpy="0.0 0.0 0.0" />
+        <axis xyz="0.0 1.0 0.0"/>       
+    </joint>
+
+
+    <!-- 4. Adding the universal wheel and its joint -->
+    <link name="front_wheel">
+        <visual>
+            <geometry> 
+                <sphere radius="0.0075" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="black">
+                <color rgba="0 0 0 0.5"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="back_wheel">
+        <visual>
+            <geometry> 
+                <sphere radius="0.0075" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="black">
+                <color rgba="0 0 0 0.5"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- the joint of the base_link and the front_wheel -->
+    <joint name="front2link" type="continuous">
+        <parent link="base_link"/>        
+        <child link="front_wheel"/>           
+        <origin xyz="0.08 0.0 -0.0475" rpy="0.0 0.0 0.0" />
+        <axis xyz="1.0 1.0 1.0"/>       
+    </joint>
+
+    <!-- the joint of the base_link and the back_wheel -->
+    <joint name="back2link" type="continuous">
+        <parent link="base_link"/>        
+        <child link="back_wheel"/>           
+        <origin xyz="-0.08 0.0 -0.0475" rpy="0.0 0.0 0.0" />
+        <axis xyz="1.0 1.0 1.0"/>       
+    </joint>
+
+
+</robot>

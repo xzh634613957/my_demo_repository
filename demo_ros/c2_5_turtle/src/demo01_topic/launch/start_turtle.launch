@@ -1,0 +1,12 @@
+<!-- start turtlesim -->
+
+<launch>
+    <!-- start turtlesim GUI -->
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlegui" output="screen"/>
+    <!-- start keyboard -->
+    <!-- <node pkg="turtlesim" type="turtle_teleop_key" name="keyboard"/> -->
+    <!-- start custom node -->
+    <!-- <node pkg="demo01_topic" type="turtle_pub.py" name="turtle_control" output="screen"/> -->
+    <!-- <node pkg="demo01_topic" type="turtle_sub.py" name="turtle_pose" output="screen"/> -->
+
+</launch>

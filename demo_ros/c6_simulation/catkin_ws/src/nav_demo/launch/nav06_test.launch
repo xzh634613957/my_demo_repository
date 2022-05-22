@@ -1,0 +1,18 @@
+<!-- 集成导航相关的launch文件 -->
+<launch>
+
+    <!-- 1.地图服务 -->
+    <include file="$(find nav_demo)/launch/nav03_map_server.launch" />
+   
+    <!-- 2.amcl定位 -->
+    <include file="$(find nav_demo)/launch/nav04_amcl.launch" />
+
+    <!-- 3.路径规划 -->
+    <include file="$(find nav_demo)/launch/nav05_path.launch" />
+
+    <!-- 4.rviz -->
+    <node pkg="joint_state_publisher" name="joint_state_publisher" type="joint_state_publisher" />
+    <node pkg="robot_state_publisher" name="robot_state_publisher" type="robot_state_publisher" />
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find nav_demo)/config/nav_test.rviz" />
+
+</launch>

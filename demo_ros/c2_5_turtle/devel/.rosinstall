@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/xiongzh/demo_ros/c2_5_turtle/devel/setup.sh

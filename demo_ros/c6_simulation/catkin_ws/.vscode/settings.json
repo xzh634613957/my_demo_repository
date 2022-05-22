@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/usr/bin/python"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/usr/bin/python"
+    ],
+    "cSpell.words": [
+        "costmap",
+        "raytrace"
+    ]
+}

@@ -1,0 +1,4 @@
+<launch>
+    <!-- 读取地图并发布 -->
+    <node pkg="map_server" type="map_server" name="map_server" args="$(find nav_demo)/map/nav.yaml" />
+</launch>

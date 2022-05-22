@@ -1,0 +1,5 @@
+
+?python:S1481"'Remove the unused local variable "num".(ú±›Ç
+Ipython:S1481",Remove the unused local variable "num_list".(½˜Šøøÿÿÿÿ
+cpython:S1226"KIntroduce a new variable or use its initial value before reassigning 'num'.(‡çÃ
+hpython:S1226"PIntroduce a new variable or use its initial value before reassigning 'num_list'.(‡çÃ

@@ -1,0 +1,8 @@
+prefix=/home/xiongzh/demo_ros/c2_5_turtle/devel
+
+Name: demo01_topic
+Description: Description of demo01_topic
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

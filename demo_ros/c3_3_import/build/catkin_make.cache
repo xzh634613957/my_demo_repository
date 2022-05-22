@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/xiongzh/demo_ros/c3_3_import/devel -DCMAKE_INSTALL_PREFIX=/home/xiongzh/demo_ros/c3_3_import/install -G Unix Makefiles

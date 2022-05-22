@@ -1,0 +1,2 @@
+tf01_static:tf02_dynamic:tf03_tfs:tf04_turtle
+-DCATKIN_DEVEL_PREFIX=/home/xiongzh/demo_ros/c5_1_statictf/devel -DCMAKE_INSTALL_PREFIX=/home/xiongzh/demo_ros/c5_1_statictf/install -G Unix Makefiles

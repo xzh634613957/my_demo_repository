@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/usr/bin/python",
+        "/home/xiongzh/demo_ros/demo3_2/devel/lib/python2.7/dist-packages/plumbing_pub_sub2/msg"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/usr/bin/python",
+        "/home/xiongzh/demo_ros/demo3_2/devel/lib/python2.7/dist-packages/plumbing_pub_sub2/msg"
+    ]
+}

@@ -1,0 +1,8 @@
+prefix=/home/xiongzh/demo_ros/c5_1_statictf/devel
+
+Name: tf04_turtle
+Description: Description of tf04_turtle
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

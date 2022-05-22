@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/xiongzh/demo_ros/c6_simulation/catkin_ws/install/setup.sh

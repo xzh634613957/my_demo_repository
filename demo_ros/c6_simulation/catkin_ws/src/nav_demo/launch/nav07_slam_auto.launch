@@ -1,0 +1,14 @@
+<!-- 集成SLAM与导航, 实现机器人自主移动的地图构建 -->
+<launch>
+    <!-- 1.SLAM实现 -->
+    <include file="$(find nav_demo)/launch/nav01_slam.launch" />
+
+    <!-- 2.运行move_base节点(path) -->
+    <include file="$(find nav_demo)/launch/nav05_path.launch" />
+
+    <!-- 3.启动rviz(1.SLAM实现中已经启动了, 因此这里不需要再次启动) -->
+    <!-- <node pkg="joint_state_publisher" name="joint_state_publisher" type="joint_state_publisher" />
+    <node pkg="robot_state_publisher" name="robot_state_publisher" type="robot_state_publisher" />
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find nav_demo)/config/nav_test.rviz" /> -->
+
+</launch>

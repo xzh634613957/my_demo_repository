@@ -1,0 +1,8 @@
+prefix=/home/xiongzh/demo_ros/demo2_1/devel
+
+Name: my_package
+Description: Description of my_package
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

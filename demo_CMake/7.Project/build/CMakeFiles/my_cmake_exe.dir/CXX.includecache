@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Gun.h
+iostream
+-
+string
+-
+
+../include/Solider.h
+iostream
+-
+Gun.h
+../include/Gun.h
+
+/home/xiongzh/文档/学习课程/demo_CMake/7.Project/main.cpp
+Solider.h
+/home/xiongzh/文档/学习课程/demo_CMake/7.Project/Solider.h
+Gun.h
+/home/xiongzh/文档/学习课程/demo_CMake/7.Project/Gun.h
+
+/home/xiongzh/文档/学习课程/demo_CMake/7.Project/src/Gun.cpp
+Gun.h
+/home/xiongzh/文档/学习课程/demo_CMake/7.Project/src/Gun.h
+
+/home/xiongzh/文档/学习课程/demo_CMake/7.Project/src/Solider.cpp
+Solider.h
+/home/xiongzh/文档/学习课程/demo_CMake/7.Project/src/Solider.h
+

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/xiongzh/demo_ros/c5_2_rosbag/devel/setup.sh

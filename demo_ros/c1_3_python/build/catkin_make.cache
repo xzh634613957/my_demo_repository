@@ -1,0 +1,2 @@
+hello_py
+-DCATKIN_DEVEL_PREFIX=/home/xiongzh/demo_ros/demo2_2/devel -DCMAKE_INSTALL_PREFIX=/home/xiongzh/demo_ros/demo2_2/install -G Unix Makefiles

@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/opt/ros/melodic/include/**",
+        "/home/xiongzh/demo_ros/c2_5_turtle/src/demo01_topic/include/**",
+        "/home/xiongzh/demo_ros/c5_2_rosbag/src/rosbag_demo/include/**",
+        "/home/xiongzh/demo_ros/c5_1_statictf/src/tf01_static/include/**",
+        "/home/xiongzh/demo_ros/c5_1_statictf/src/tf02_dynamic/include/**",
+        "/home/xiongzh/demo_ros/c5_1_statictf/src/tf03_tfs/include/**",
+        "/home/xiongzh/demo_ros/c5_1_statictf/src/tf04_turtle/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

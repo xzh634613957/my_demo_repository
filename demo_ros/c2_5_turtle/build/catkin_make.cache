@@ -1,0 +1,2 @@
+demo01_topic
+-DCATKIN_DEVEL_PREFIX=/home/xiongzh/demo_ros/c2_5_turtle/devel -DCMAKE_INSTALL_PREFIX=/home/xiongzh/demo_ros/c2_5_turtle/install -G Unix Makefiles

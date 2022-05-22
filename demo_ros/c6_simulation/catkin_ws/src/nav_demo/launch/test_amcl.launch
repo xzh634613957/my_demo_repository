@@ -1,0 +1,16 @@
+<!-- 测试文件 -->
+<!-- 运行amcl节点之前, 需要先加载全局地图, 然后启动rviz显示定位结果 -->
+
+<launch>
+    <!-- 1.启动rviz -->
+    <node pkg="joint_state_publisher" name="joint_state_publisher" type="joint_state_publisher" />
+    <node pkg="robot_state_publisher" name="robot_state_publisher" type="robot_state_publisher" />
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find nav_demo)/config/test_amcl.rviz" />
+
+    <!-- 2.读取地图并加载地图服务 -->
+    <node pkg="map_server" type="map_server" name="map_server" args="$(find nav_demo)/map/nav.yaml" />
+
+    <!-- 3.运行amcl节点进行定位 -->
+    <include file="$(find nav_demo)/launch/nav04_amcl.launch" />
+
+</launch>
